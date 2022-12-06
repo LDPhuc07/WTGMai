@@ -12,7 +12,7 @@ $( ".say-yes" ).click(function() {
     $(".content-say-yes").show();
 });
 
-$(function TronTranh(){
+$(function(){
       $(".say-no").on({
           mouseover:function(){
               $(this).css({
