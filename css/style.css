@@ -154,7 +154,7 @@ html, body {
 }
 .content-say-yes {
       font-family: 'Pacifico';
-      width: 460px;
+      width: 540px;
       height: 560px;
       background-color: #ffb6b6;
       position: absolute;
@@ -170,7 +170,7 @@ html, body {
 }
 .content-say-no {
       font-family: 'Pacifico';
-      width: 400px;
+      width: 540px;
       height: 450px;
       background-color: #535858;
       position: absolute;
