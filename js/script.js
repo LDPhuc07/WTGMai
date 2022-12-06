@@ -7,6 +7,7 @@ $( ".answer" ).click(function() {
         $(".question-love").show();
     });
 });
+var dem = 0;
 $( ".say-yes" ).click(function() {
     $(".content-say-yes").show();
 });
@@ -27,20 +28,40 @@ $('.say-no').bind('touchstart', function(){
         top:(Math.random()*90)+"%"
     });
 })
-setTimeout($( ".say-no" ).click(function() {
-    $(".content-say-no").show();
-}), 100000);
+$( ".say-no" ).click(function() {
+    if (screen.width > 600) {
+        $(".content-say-no").show();
+    } else {
+        if(dem > 5) {
+            $(".content-say-no").show();
+        }
+    }
+    
+});
 $( ".close" ).click(function() {
     $(".content-say-yes, .content-say-no").hide();
 });
 
 function playSad() {
-    var audio_happy = document.getElementById("audio-happy");
-    audio_happy.pause();
-    audio_happy.currentTime = 0;
-    var audio_sad = document.getElementById("audio-sad");
-    audio_sad.currentTime = 1;
-    audio_sad.play();
+    dem++;
+    if (screen.width > 600) {
+        var audio_happy = document.getElementById("audio-happy");
+        audio_happy.pause();
+        audio_happy.currentTime = 0;
+        var audio_sad = document.getElementById("audio-sad");
+        audio_sad.currentTime = 1;
+        audio_sad.play();
+    } else {
+        if(dem > 5) {
+            var audio_happy = document.getElementById("audio-happy");
+            audio_happy.pause();
+            audio_happy.currentTime = 0;
+            var audio_sad = document.getElementById("audio-sad");
+            audio_sad.currentTime = 1;
+            audio_sad.play();
+        } 
+    }
+    
 }
 function playHappy() {
     var audio_happy = document.getElementById("audio-happy");
