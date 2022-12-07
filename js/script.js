@@ -65,7 +65,7 @@ function playSad() {
 }
 function playHappy() {
     var audio_happy = document.getElementById("audio-happy");
-    audio_happy.currentTime = 7;
+    audio_happy.currentTime = 22;
     audio_happy.play();
     var audio_sad = document.getElementById("audio-sad");
     audio_sad.pause();
